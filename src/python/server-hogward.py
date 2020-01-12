@@ -14,10 +14,10 @@ class MyEnconder(JSONEncoder):
         return o.__dict__
 
 
-@app.route("/students", methods=['GET', 'POST', 'PUT'])
+@app.route("/students", methods=['GET', 'POST'])
 def student_list():
     if request.method == 'GET':
-        return jsonify(students=list(student_data.list_of_students().value))
+        return jsonify(students=list(student_data.list_of_students().values()))
     elif request.method == 'POST':
         return add_student()
 
@@ -26,16 +26,16 @@ def student_list():
 def student_handler(student_id):
     if request.method == 'GET':
         return jsonify(student_data.individual_student(student_id))
-    elif request.method == 'POST':
+    elif request.method == 'DELETE':
         return jsonify(student_data.remove(student_id))
     elif request.method == 'PUT':
         return update_student()
 
 
-@app.route("/dashboard")
-def dashboard():
-    dashboard_display = request.get('')
-    return dashboard_display
+# @app.route("/dashboard")
+# def dashboard():
+#     dashboard_display = request.get('')
+#     return dashboard_display
 
 
 def add_student():
@@ -55,6 +55,6 @@ def update_student():
     return jsonify(student_data.individual_student(Student.student_id))
 
 
-if __name__ == '__name__':
+if __name__ == '__main__':
     app.json_encoder = MyEnconder
     app.run()
