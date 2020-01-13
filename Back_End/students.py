@@ -25,41 +25,23 @@ class Student:
 
 class StudentsData:
     def __init__(self):
-        self.Students = {
-            '1': Student(
-                'Harry',
-                'Potter',
-                {},
-                {'Conjuror', 2},
-                {'Conjuror', 3},
-            ),
-            '2': Student(
-                'Hermione',
-                'Granger',
-                {},
-                {'Alchemy', 4},
-                {'Alchemy', 5},
-            ),
-            '3': Student(
-                'Ron',
-                'Weisly',
-                {},
-                {'Animation', 1},
-                {'Animation', 2},
-            )
+        self.students = {
+            '1': Student('Harry', 'Potter', {'Magic day to day life'}, {'Conjuror': 2}, {'Conjuror': 3},),
+            '2': Student('Hermione', 'Granger', {'Magic day to day life'}, {'Alchemy': 4}, {'Alchemy': 5},),
+            '3': Student('Ron', 'Weisly', {'Magic day to day life'}, {'Animation': 1}, {'Animation': 2},)
         }
 
     def list_of_students(self):
-        return self.Students
+        return self.students
 
     def individual_student(self, student_id):
-        return self.Students.get(student_id)
+        return self.students.get(student_id)
 
     def create_student(self, student):
-        self.Students[student.student_id] = student
+        self.students[student.student_id] = student
 
     def update_student(self, student):
-        self.Students[student.student_id] = student
+        self.students[student.student_id] = student
 
     def remove_student(self, student_id):
-        self.Students.pop(student_id)
+        self.students.pop(student_id)

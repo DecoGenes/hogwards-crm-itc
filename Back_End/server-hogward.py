@@ -9,18 +9,20 @@ CORS(app)
 student_data = StudentsData()
 
 
-class MyEnconder(JSONEncoder):
+class MyEncoder(JSONEncoder):
     def default(self, o):
         return o.__dict__
 
 
-@app.route("/students", methods=['GET', 'POST'])
+@app.route("/students", methods=["GET", 'POST'])
 def student_list():
-    if request.method == 'GET':
-        return jsonify(students=list(student_data.list_of_students().values()))
+    if request.method == "GET":
+        return student_list()
     elif request.method == 'POST':
         return add_student()
 
+def student_list():
+    return jsonify(students=list(student_data.list_of_students().values()))
 
 @app.route("/students/<student_id>", methods=['GET', 'DELETE', 'PUT'])
 def student_handler(student_id):
@@ -56,5 +58,5 @@ def update_student():
 
 
 if __name__ == '__main__':
-    app.json_encoder = MyEnconder
+    app.json_encoder = MyEncoder
     app.run()
