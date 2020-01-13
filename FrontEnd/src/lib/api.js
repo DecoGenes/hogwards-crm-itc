@@ -1,1 +1,2 @@
-import axious
+import axios from 'axios'
+
