@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b6539971-ea9e-46a2-8145-4e9d2b36f4b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back_End/server-hogward.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/server-hogward.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back_End/students.py" beforeDir="false" afterPath="$PROJECT_DIR$/Back_End/students.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/StudentList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/StudentList/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/lib/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/lib/api.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
